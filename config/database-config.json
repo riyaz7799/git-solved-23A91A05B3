@@ -1,5 +1,6 @@
 {
   "connection": {
+<<<<<<< HEAD
     "type": "distributed",
     "hosts": [
       "node1.example.com",
@@ -40,5 +41,31 @@
     "slow_query_threshold": 100,
     "alert_on_anomaly": true,
     "metrics_export": "prometheus"
+=======
+    "host": "localhost",
+    "port": 5432,
+    "database": "devops_development",
+    "username": "dev_user",
+    "password": "dev_password",
+    "ssl_mode": "disable",
+    "pool_size": 5,
+    "timeout": 10
+  },
+  "backup": {
+    "enabled": false,
+    "schedule": "manual",
+    "retention_days": 7,
+    "location": "/tmp/backups"
+  },
+  "replication": {
+    "enabled": false,
+    "replicas": 0,
+    "sync_mode": "asynchronous"
+  },
+  "development": {
+    "seed_data": true,
+    "reset_on_restart": true,
+    "debug_queries": true
+>>>>>>> dev
   }
 }

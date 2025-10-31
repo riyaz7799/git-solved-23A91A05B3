@@ -1,33 +1,35 @@
-<<<<<<< HEAD
-# Experimental Application Configuration
+# Application Configuration (Combined)
 application:
   name: DevOpsSimulator
   version: 3.0.0-experimental
-  environment: testing
+  environment: development
   experimental_mode: true
   
 server:
-  host: 0.0.0.0
+  host: localhost
   port: 9000
   ssl_enabled: true
   multi_port: [9000, 9001, 9002]
+  hot_reload: true
   
 logging:
   level: TRACE
   format: structured
   output: /var/log/experimental.log
+  show_stack_trace: true
   ai_analysis: enabled
   
 database:
   host: cluster.example.com
   port: 5432
-  name: devops_experimental
+  name: devops_dev
   distributed: true
   
 features:
   auto_scaling: advanced
   load_balancer: ai-optimized
   backup_enabled: true
+  experimental_features: true
   chaos_engineering: enabled
   
 ai_features:
@@ -35,6 +37,16 @@ ai_features:
   anomaly_detection: true
   auto_optimization: true
   model_version: "v2.1.0"
+  
+development:
+  mock_external_apis: true
+  debug_mode: true
+  cors_enabled: true
+  
+notifications:
+  slack_webhook: "https://hooks.slack.com/services/XXX"
+  discord_webhook: "https://discord.com/api/webhooks/YYY"
+  email_alerts: false
   
 cloud_providers:
   - aws
@@ -46,43 +58,3 @@ security:
   zero_trust: enabled
   encryption: AES-256
   audit_logging: comprehensive
-=======
-# Development Application Configuration
-application:
-  name: DevOpsSimulator
-  version: 2.0.0-beta
-  environment: development
-  
-server:
-  host: localhost
-  port: 3000
-  ssl_enabled: false
-  hot_reload: true
-  
-logging:
-  level: DEBUG
-  format: pretty
-  output: console
-  show_stack_trace: true
-  
-database:
-  host: localhost
-  port: 5432
-  name: devops_dev
-  
-features:
-  auto_scaling: false
-  load_balancer: disabled
-  backup_enabled: false
-  experimental_features: true
-  
-development:
-  mock_external_apis: true
-  debug_mode: true
-  cors_enabled: true
-  
-notifications:
-  slack_webhook: "https://hooks.slack.com/services/XXX"
-  discord_webhook: "https://discord.com/api/webhooks/YYY"
-  email_alerts: false
->>>>>>> dev

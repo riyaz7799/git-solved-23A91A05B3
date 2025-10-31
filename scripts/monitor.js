@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * Combined System Monitoring Script
  * Merges Experimental AI and Development Debug features
  */
@@ -73,11 +74,41 @@ function checkSystemHealth() {
   } else {
     console.log('✅ System Status: HEALTHY');
   }
+=======
+ * System Monitoring Script - Production
+ * Monitors application health and performance
+ */
+
+const monitorConfig = {
+  interval: 60000, // 1 minute
+  alertThreshold: 80,
+  metricsEndpoint: 'http://localhost:8080/metrics'
+};
+
+console.log('=================================');
+console.log('DevOps Simulator - Monitor v1.0');
+console.log('=================================');
+
+function checkSystemHealth() {
+  console.log(`[${new Date().toISOString()}] Checking system health...`);
+  
+  // Check CPU usage
+  console.log('✓ CPU usage: Normal');
+  
+  // Check Memory
+  console.log('✓ Memory usage: Normal');
+  
+  // Check Disk
+  console.log('✓ Disk space: Adequate');
+  
+  console.log('System Status: HEALTHY');
+>>>>>>> 0312c6f8d8a5e5ba7f08500fbb0a8a97d4f7517a
 }
 
 // Start monitoring
 console.log(`Monitoring every ${monitorConfig.interval}ms`);
 setInterval(checkSystemHealth, monitorConfig.interval);
+<<<<<<< HEAD
 checkSystemHealth();
 
 // Background tasks
@@ -95,3 +126,8 @@ if (monitorConfig.debugMode) {
     console.log(`RSS: ${(memUsage.rss / 1024 / 1024).toFixed(2)} MB, Heap Used: ${(memUsage.heapUsed / 1024 / 1024).toFixed(2)} MB`);
   }, 30000);
 }
+=======
+
+// Run first check immediately
+checkSystemHealth();
+>>>>>>> 0312c6f8d8a5e5ba7f08500fbb0a8a97d4f7517a

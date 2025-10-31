@@ -1,104 +1,89 @@
-<<<<<<< HEAD
-# System Architecture - Experimental Build
+# System Architecture - DevOps Simulator
 
 ## Overview
-DevOps Simulator follows an **event-driven microservices architecture** with AI/ML integration, designed for multi-cloud deployments and chaos engineering.
+DevOps Simulator follows a **microservices architecture** with event-driven design, AI/ML integration, and support for multi-cloud deployments.
 
-**⚠️ EXPERIMENTAL**: This architecture includes untested cutting-edge features.
+This merged document includes both **experimental** and **development** features, providing a comprehensive view of the system.
+
+---
 
 ## Core Components
 
-### 1. Application Server (AI-Enhanced)
-- **Technology**: Node.js + Express + TensorFlow.js
-- **Port**: 9000 (main), 9001 (metrics), 9002 (AI API)
-- **Scaling**: AI-powered predictive auto-scaling
-- **Intelligence**: Real-time ML inference
+### 1. Application Server
+- **Technology**: Node.js + Express  
+- **Experimental Ports**: 9000 (main), 9001 (metrics), 9002 (AI API)  
+- **Development Port**: 3000  
+- **Scaling**: AI-powered predictive auto-scaling (experimental), Manual single instance (development)  
+- **Debug**: Chrome DevTools debugger on port 9229 (dev)  
+- **Intelligence**: Real-time ML inference  
 - **Message Queue**: Apache Kafka for event streaming
 
-### 2. Distributed Database Layer
-- **Primary**: PostgreSQL 14 cluster (5 nodes)
-- **Cache**: Redis cluster with ML-based cache optimization
-- **Configuration**: Multi-master replication
-- **Backup**: Continuous backup with geo-redundancy
-- **AI Features**: Query optimization, index suggestions
-
-### 3. AI/ML Pipeline
-- **Framework**: TensorFlow, PyTorch, Scikit-learn
-- **Models**: 
-  - Anomaly detection (LSTM neural network)
-  - Load prediction (XGBoost)
-  - Auto-scaling optimizer (Reinforcement Learning)
-- **Training**: Continuous online learning
-- **Inference**: Real-time predictions (<50ms latency)
-
-### 4. Multi-Cloud Orchestration
-- **Supported Clouds**: AWS, Azure, GCP, DigitalOcean
-- **Orchestrator**: Kubernetes with custom CRDs
-- **Load Balancing**: Global anycast with GeoDNS
-- **Failover**: Automatic cross-cloud failover
-
-### 5. Advanced Monitoring & Observability
-- **Metrics**: Prometheus + Thanos (long-term storage)
-- **Logs**: ELK Stack + AI log analysis
-=======
-# System Architecture
-
-## Overview
-DevOps Simulator follows a microservices architecture designed for high availability and scalability.
-
-**Development Version**: This document describes the development architecture with experimental features.
-
-## Components
-
-### 1. Application Server
-- **Technology**: Node.js + Express (with hot reload)
-- **Port**: 3000 (development)
-- **Scaling**: Manual (single instance for development)
-- **Debug**: Chrome DevTools debugger on port 9229
-
 ### 2. Database Layer
-- **Database**: PostgreSQL 14 (local instance)
-- **Configuration**: Single instance (no replication in dev)
-- **Backup**: Manual backups only
-- **Seeding**: Auto-seed with test data on startup
+- **Primary**: PostgreSQL 14 cluster (experimental), Local instance (dev)  
+- **Cache**: Redis cluster with ML-based cache optimization (experimental)  
+- **Configuration**: Multi-master replication (experimental), single instance (dev)  
+- **Backup**: Continuous geo-redundant backup (experimental), Manual backup (dev)  
+- **AI Features**: Query optimization, index suggestions (experimental)  
+- **Seeding**: Auto-seed with test data on startup (dev)
 
 ### 3. Monitoring System
-- **Tool**: Basic console logging + Prometheus (optional)
-- **Metrics**: CPU, Memory, Disk, Network, Build time
-- **Alerts**: Console warnings (no email in dev)
-- **Dashboard**: In-development web dashboard
+- **Experimental Tools**: Prometheus + Thanos, ELK Stack + AI log analysis  
+- **Development Tools**: Basic console logging + optional Prometheus  
+- **Metrics**: CPU, Memory, Disk, Network, Build time  
+- **Alerts**: Console warnings (dev), AI predictive alerts (experimental)  
+- **Dashboard**: Experimental AI dashboard, In-development web dashboard (dev)
 
-### 4. NEW: Container Orchestration
-- **Tool**: Docker Compose (local)
-- **Services**: App, Database, Redis cache
-- **Volume Mounts**: Code directory for hot reload
+### 4. Multi-Cloud & Container Orchestration
+- **Experimental**: AWS, Azure, GCP, DigitalOcean; Kubernetes with custom CRDs  
+- **Development**: Docker Compose (local), code hot reload  
+- **Load Balancing**: Global anycast with GeoDNS (experimental)  
+- **Failover**: Automatic cross-cloud failover (experimental)  
+- **Services**: App, Database, Redis cache (dev)  
 
-### 5. NEW: Authentication System (Beta)
-- **Method**: OAuth2 + JWT
-- **Providers**: Google, GitHub (for testing)
+### 5. AI / ML Pipeline
+- **Frameworks**: TensorFlow, PyTorch, Scikit-learn  
+- **Models**:  
+  - Anomaly detection (LSTM)  
+  - Load prediction (XGBoost)  
+  - Auto-scaling optimizer (Reinforcement Learning)  
+- **Training**: Continuous online learning  
+- **Inference**: Real-time predictions (<50ms latency)  
+
+### 6. Authentication System (Development Beta)
+- **Method**: OAuth2 + JWT  
+- **Providers**: Google, GitHub (for testing)  
 - **Sessions**: Redis-based session storage
 
+---
+
 ## Deployment Strategy
-- **Method**: Docker Compose hot reload
-- **Zero-downtime**: Not applicable (dev environment)
-- **Rollback**: Git checkout previous commit
+- **Experimental**: Canary multi-cloud deployment with AI monitoring  
+- **Development**: Docker Compose hot reload  
+- **Rollback**: Git checkout previous commit (dev)  
+- **Zero-downtime**: Only for experimental multi-cloud deployments
+
+---
 
 ## Development Workflow
-1. Make code changes
-2. Auto-reload triggers rebuild
-3. Run unit tests
-4. Check console logs
+1. Make code changes  
+2. Auto-reload triggers rebuild (dev)  
+3. Run unit tests  
+4. Check console logs  
 5. Commit when ready
 
-## Security
-- SSL/TLS disabled for local development
-- Database credentials in plain text (dev only)
-- CORS enabled for all origins
-- Debug endpoints exposed
+---
 
-## Experimental Features
-⚠️ **Warning**: The following features are experimental:
-- Multi-cloud deployment
-- AI-powered log analysis
-- Automatic rollback on anomaly detection
->>>>>>> dev
+## Security Considerations
+- SSL/TLS enabled for experimental, disabled for local dev  
+- Database credentials encrypted (experimental) / plain text (dev)  
+- CORS enabled for all origins (dev only)  
+- Debug endpoints exposed (dev)  
+
+---
+
+## Experimental Features ⚠️
+- Multi-cloud deployment  
+- AI-powered log analysis  
+- Automatic rollback on anomaly detection  
+- Chaos engineering tests  
+- Predictive scaling and optimization

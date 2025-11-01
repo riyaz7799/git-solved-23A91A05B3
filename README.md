@@ -1,26 +1,15 @@
-# DevOps Simulator
+# DevOpsSimulator
 
-A comprehensive CI/CD configuration management tool for enterprise deployments.
-
-## Project Status
-**Version**: 1.0.0  
-**Environment**: Production  
-**Maintainer**: DevOps Team
+This project is a Git Mastery Challenge simulator. It includes experimental features for development and stable production code for reference.
 
 ## Features
-- Automated deployment scripts
-- Real-time monitoring
-- Configuration management
-- Backup and recovery system
+- Experimental auto-scaling and AI-optimized load balancer
+- Production-ready backup and monitoring scripts
+- Multi-environment support: development and production
+- Documentation in `docs/` folder
+- Tests in `tests/` folder
 
-## Quick Start
-1. Clone the repository
-2. Configure environment variables
-3. Run deployment script
-4. Monitor system health
-
-## Documentation
-See `/docs` folder for detailed documentation.
-
-## License
-MIT License
+## Setup
+1. Clone your repository
+2. Install dependencies
+3. Run scripts in `scripts/` folder

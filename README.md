@@ -13,3 +13,10 @@ This project is a Git Mastery Challenge simulator. It includes experimental feat
 1. Clone your repository
 2. Install dependencies
 3. Run scripts in `scripts/` folder
+
+## My Git Mastery Challenge Summary
+- Learned to clone, branch, and merge repositories
+- Resolved conflicts manually
+- Practiced Git commands like cherry-pick, rebase, revert, and stash
+- Final version tagged as v1.0
+
